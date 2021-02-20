@@ -41,6 +41,7 @@
 
 *::-webkit-scrollbar {
     width: 5px;
+    scrollbar-color: rbga(155, 155, 155, 0.5);
   }
   *::-webkit-scrollbar-track {
     background: transparent;
@@ -49,4 +50,8 @@
     background-color: rgba(155, 155, 155, 0.7);
     border-radius: 20px;
     border: transparent;
+  }
+
+  .selected{
+      background:rbg(165, 181, 228);
   }
