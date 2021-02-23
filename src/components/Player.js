@@ -1,6 +1,7 @@
 import React, {useEffect} from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay, faAngleLeft, faAngleRight, faPause } from '@fortawesome/free-solid-svg-icons';
+import { playAudio } from '../util'
 
 const Player = ({ setSongs ,songs, setSongInfo, songInfo , audioRef , setCurrentSong, currentSong, isPlaying, setIsPlaying }) => {
     
@@ -49,6 +50,7 @@ const Player = ({ setSongs ,songs, setSongInfo, songInfo , audioRef , setCurrent
 		} else if (direction === 'skip-back') {
 			setCurrentSong(songs[currentIndex - 1] || songs[songs.length -1]);
 		}
+        playAudio(isPlaying, audioRef);
 	};
 
     return (
