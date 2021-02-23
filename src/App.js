@@ -39,6 +39,7 @@ const timeUpdateHandler = (e) => {
         isPlaying={isPlaying} 
         currentSong={currentSong} 
         setCurrentSong={setCurrentSong}
+        setSongs={setSongs}
       />
       <Library 
         setSongs={setSongs}
