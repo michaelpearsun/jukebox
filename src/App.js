@@ -31,12 +31,14 @@ const timeUpdateHandler = (e) => {
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
       <Song currentSong={currentSong} />
       <Player 
+        songs={songs}
         setSongInfo={setSongInfo}
         songInfo={songInfo}
         audioRef={audioRef}
         setIsPlaying={setIsPlaying} 
         isPlaying={isPlaying} 
         currentSong={currentSong} 
+        setCurrentSong={setCurrentSong}
       />
       <Library 
         setSongs={setSongs}
