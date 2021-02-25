@@ -19,7 +19,7 @@
     align-items: center;
     padding: 1rem 2rem 1rem 2rem;
     cursor: pointer;
-    transition: background 0.5s ease;
+    transition: all 0.5s ease;
     img {
         width: 30%;
     }
@@ -40,12 +40,12 @@
 
 *{
     scrollbar-width: thin;
-    scrollbar-color: rbga(155, 155, 155, 0.5) transparent;
+    scrollbar-color: rgba(155, 155, 155, 0.5) transparent;
 }
 
 *::-webkit-scrollbar {
     width: 5px;
-    scrollbar-color: rbga(155, 155, 155, 0.5);
+    scrollbar-color: rgba(155, 155, 155, 0.5);
   }
   *::-webkit-scrollbar-track {
     background: transparent;
@@ -57,7 +57,7 @@
   }
 
   .selected{
-      background:rbg(165, 181, 228);
+      background: rgb(194, 208, 253);
   }
 
   .active-library{
