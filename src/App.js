@@ -30,6 +30,12 @@ const timeUpdateHandler = (e) => {
   setSongInfo({...songInfo, currentTime: current, duration: duration, animationPercentage: animation})
 }
 
+const songEndHandler = async () => {
+  let currentIndex = songs.findIndex(song => song.id === currentSong.id);
+  await setCurrentSong(songs[currentIndex + 1] || songs[0]);
+  if(isPlaying) audioRef.current.play();
+};
+
   return (
     <div className="App">
       <Nav libraryStatus={libraryStatus} setLibraryStatus={setLibraryStatus} />
@@ -59,6 +65,7 @@ const timeUpdateHandler = (e) => {
           onTimeUpdate={timeUpdateHandler} 
           ref={audioRef} 
           src={currentSong.audio} 
+          onEnded={songEndHandler}
       >
       </audio>
     </div>
