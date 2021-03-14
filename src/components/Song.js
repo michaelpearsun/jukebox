@@ -1,13 +1,19 @@
-import React from 'react';
+import Deck from "../deck.png";
 
-const Song = ({currentSong}) => {
+const Song = ({ currentSong, isPlaying }) => {
     return (
-        <div className="song-container">
-            <img alt={currentSong.name} src={currentSong.cover}></img>
-            <h2>{currentSong.name}</h2>
-            <h3>{currentSong.artist}</h3>
+        <div className="song">
+            <div className="song__data">
+                <p><i>"{currentSong.name}"</i></p>
+                <p>{currentSong.artist}</p>
+            </div>
+
+            <div className="song__img">
+                <img className="song__img--deck" src={Deck} alt="turntable" />
+                <img className= {`song__img--cover ${isPlaying ? "rotate" : ""}`} src={currentSong.cover} alt={currentSong.title} />
+            </div>
         </div>
     )
-}
+};
 
-export default Song
+export default Song;
